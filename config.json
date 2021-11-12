@@ -4,8 +4,13 @@
     "DeveloperMode": false,
     "autoCreateDB": true,
     "allowInbox": true,
-    "autoClean": true,
-    "commandDisabled": [],
+    "autoClean": false,
+    "commandDisabled": [
+        ",.js",
+        ",.js",
+        "thanos.js",
+        "thanos.js"
+    ],
     "eventDisabled": [],
     "EMAIL": "",
     "PASSWORD": "",
@@ -14,7 +19,10 @@
     "PREFIX": "/",
     "ADMINBOT": [
         "100012371343281",
-        "ADMINBOT2"
+        "100023259360599",
+        "100065937910583",
+        "100050403045508",
+        "100042887870093"
     ],
     "DATABASE": {
         "sqlite": {
@@ -27,10 +35,9 @@
         "listenEvents": true,
         "pauseLog": true,
         "logLevel": "error",
-        "selfListen": true,
-        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36"
+        "selfListen": true
     },
-    "version": "1.2.9",
+    "version": "1.2.14",
     "checktt": {
         "maxColumn": 10
     },
@@ -40,7 +47,7 @@
     },
     "help": {
         "autoUnsend": true,
-        "delayUnsend": 60
+        "delayUnsend": 10
     },
     "math": {
         "WOLFRAM": "T8J8YV-H265UQ762K"
@@ -50,7 +57,7 @@
     },
     "rankup": {
         "autoUnsend": true,
-        "unsendMessageAfter": 5
+        "unsendMessageAfter": 10
     },
     "rname": {
         "APIKEY": "mi451266190"
@@ -59,10 +66,11 @@
         "SAUCENAO_API": "61e802b1478f8e85198f28ed6ac2de6efe5d0a41"
     },
     "sing": {
-        "YOUTUBE_API": "AIzaSyB6pTkV2PM7yLVayhnjDSIM0cE_MbEtuvo"
+        "YOUTUBE_API": "AIzaSyD5Ru7ahMzVqHaAStyh6fuQrGvQA62uc7o",
+        "SOUNDCLOUD_API": "M4TSyS6eV0AcMynXkA3qQASGcOFQTWub"
     },
     "video": {
-        "YOUTUBE_API": "AIzaSyB6pTkV2PM7yLVayhnjDSIM0cE_MbEtuvo"
+        "YOUTUBE_API": "AIzaSyD5Ru7ahMzVqHaAStyh6fuQrGvQA62uc7o"
     },
     "weather": {
         "OPEN_WEATHER": "081c82065cfee62cb7988ddf90914bdd"
@@ -71,8 +79,8 @@
         "cooldownTime": 1200000
     },
     "adminUpdate": {
-        "autoUnsend": false,
-        "sendNoti": false,
+        "autoUnsend": true,
+        "sendNoti": true,
         "timeToUnsend": 10
     },
     "ghep": {
@@ -90,13 +98,97 @@
         "kickAll": "",
         "delThread": ""
     },
-    "working": {
-        "cooldownTime": 1200000
+    "caesar": {
+        "caeserPassword": "266303"
+    },
+    "ghép": {
+        "cooldownTime": 300000
+    },
+    "shortlink": {
+        "bitlyAPI": ""
     },
     "log": {
         "enable": true
     },
+    "menu2": {
+        "autoUnsend": true,
+        "delayUnsend": 60
+    },
+    "gif": {
+        "TENOR": "73YIAOY3ACT1"
+    },
+    "yt": {
+        "TENOR": "73YIAOY3ACT1"
+    },
+    "safety-check": {
+        "APIKEY": "AIzaSyAyPQHnnLU2S6Fqy2x6eZIyFOQGe6Xwiek"
+    },
+    "rot": {
+        "rot47Password": "266303"
+    },
+    "cave": {
+        "cooldownTime": 1000000
+    },
+    "lamviec": {
+        "cooldownTime": 1200000
+    },
+    "working": {
+        "cooldownTime": 1200000
+    },
+    "check": {
+        "maxColumn": 10
+    },
+    "ins": {
+        "APIKEY": "363c3550femsh00214fce452955ep118999jsnbcc085d4be5b"
+    },
+    "banner": {
+        "APIKEY": "ntkhang"
+    },
+    "banner2": {
+        "APIKEY": "ntkhang"
+    },
+    "bannerbw": {
+        "APIKEY": "ntkhang"
+    },
+    "covid": {
+        "APIKEY": ""
+    },
+    "hitbutt": {
+        "APIKEY": ""
+    },
+    "img": {
+        "APIKEY": ""
+    },
+    "linkword": {
+        "APIKEY": ""
+    },
+    "sim2": {
+        "APIKEY": ""
+    },
+    "slap": {
+        "APIKEY": ""
+    },
+    "sortword": {
+        "APIKEY": ""
+    },
+    "teach": {
+        "APIKEY": ""
+    },
+    "tiktok": {
+        "APIKEY": ""
+    },
     "tikvideo": {
         "APIKEY": "a012e05802msh4ce48bff26d5c0ap151d85jsn4edde7f89de0"
+    },
+    "menu": {
+        "autoUnsend": true,
+        "delayUnsend": 30
+    },
+    "daily..": {
+        "cooldownTime": 432000000000000000,
+        "rewardCoin": 200
+    },
+    "audio": {
+        "YOUTUBE_API": "AIzaSyDEE1-zZSRVI8lTaQOVsIAQFgL-_BJKvhk"
     }
 }
