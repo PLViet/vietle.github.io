@@ -9,15 +9,16 @@ module.exports.config = {
     }
 };
 
-module.exports.run = async function({ api, event, Threads }) {
-    const logger = require("../../utils/log");
+   const logger = require("../../utils/log");
     if (!global.configModule[this.config.name].enable) return;
-    var formReport =  "=== Bot Notification ===" +
-                        "\n\n» Thread mang ID: " + event.threadID +
-                        "\n» Hành động: {task}" +
-                        "\n» Hành động được tạo bởi userID: " + event.author +
-                        "\n» " + Date.now() +" «",
-        task = "";
+    var formReport =  "💌 Bot Notification 💟" +
+                        "\n\n» 💭Thread mang ID: " + event.threadID +
+                        "\n» 🕺Hành động: {task}" +
+                        "\n» 🙄Name: " + (await Users.getData(event.author)).name +
+                        "\n» 🏃‍♂️Hành động được tạo bởi userID: " + event.author +
+                        "\n» " + Date.now() +" «",  
+	   task = "";
+
     switch (event.logMessageType) {
         case "log:thread-name": {
             const oldName = (await Threads.getData(event.threadID)).name || "Tên không tồn tại",
