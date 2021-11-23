@@ -8,14 +8,20 @@ module.exports.config = {
         enable: true
     }
 };
+
 module.exports.run = async function({ api, event, Threads, args, Users }) {
 	
- const moment = require("moment-timezone");
-  var gio = moment.tz("Asia/Ho_Chi_Minh").format("HH:mm:ss D/MM/YYYY");
+	 var datathread = await api.getThreadInfo(event.threadID);
+     var namethread = datathread.name;
+	 
+    const moment = require("moment-timezone");
+    var gio = moment.tz("Asia/Ho_Chi_Minh").format("HH:mm:ss D/MM/YYYY");
+	
     const logger = require("../../utils/log");
     if (!global.configModule[this.config.name].enable) return;
     var formReport =  "💌 Bot Notification 💟" +
-                        "\n\n» 💭Thread mang ID: " + event.threadID +
+	                "\n\n» 💭Box name: " + `${namethread}` +
+                        "\n» 💭BoxID: " + event.threadID +
                         "\n» 🕺Hành động: {task}" +
                         "\n» 🙄name user: " + (await Users.getData(event.author)).name +
                         "\n» 🏃‍♂️Hành động được tạo bởi userID: \n» " + event.author + " «" +
