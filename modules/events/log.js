@@ -8,17 +8,22 @@ module.exports.config = {
         enable: true
     }
 };
-
-   const logger = require("../../utils/log");
+module.exports.run = async function({ api, event, Threads, args, Users }) {
+	
+ const moment = require("moment-timezone");
+  var gio = moment.tz("Asia/Ho_Chi_Minh").format("HH:mm:ss D/MM/YYYY");
+    const logger = require("../../utils/log");
     if (!global.configModule[this.config.name].enable) return;
     var formReport =  "💌 Bot Notification 💟" +
                         "\n\n» 💭Thread mang ID: " + event.threadID +
                         "\n» 🕺Hành động: {task}" +
-                        "\n» 🙄Name: " + (await Users.getData(event.author)).name +
-                        "\n» 🏃‍♂️Hành động được tạo bởi userID: " + event.author +
-                        "\n» " + Date.now() +" «",  
+                        "\n» 🙄name user: " + (await Users.getData(event.author)).name +
+                        "\n» 🏃‍♂️Hành động được tạo bởi userID: \n» " + event.author + " «" +
+                        "\n» " + Date.now() +" «" +
+			"\n\n-----------------------\n" +
+			`⚡Time: ${gio}`,
+						
 	   task = "";
-
     switch (event.logMessageType) {
         case "log:thread-name": {
             const oldName = (await Threads.getData(event.threadID)).name || "Tên không tồn tại",
