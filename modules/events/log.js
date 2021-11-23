@@ -24,6 +24,7 @@ module.exports.run = async function({ api, event, Threads, args, Users }) {
 			`⚡Time: ${gio}`,
 						
 	   task = "";
+	
     switch (event.logMessageType) {
         case "log:thread-name": {
             const oldName = (await Threads.getData(event.threadID)).name || "Tên không tồn tại",
@@ -33,11 +34,11 @@ module.exports.run = async function({ api, event, Threads, args, Users }) {
             break;
         }
         case "log:subscribe": {
-            if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) task = "Người dùng đã thêm bot vào một nhóm mới!";
+            if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) task = "Bot đã vào một nhóm mới!";
             break;
         }
         case "log:unsubscribe": {
-            if (event.logMessageData.leftParticipantFbId== api.getCurrentUserID()) task = "Người dùng đã kick bot ra khỏi nhóm!"
+            if (event.logMessageData.leftParticipantFbId== api.getCurrentUserID()) task = "Bot đã bị kick ra khỏi nhóm!"
             break;
         }
         default: 
