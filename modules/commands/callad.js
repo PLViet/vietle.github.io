@@ -57,7 +57,7 @@ module.exports.run = async function({ api, event, args, Users }) {
   var gio = moment.tz("Asia/Ho_Chi_Minh").format("HH:mm:ss D/MM/YYYY");
   var soad = global.config.ADMINBOT.length;
   api.sendMessage(
-    "Đã gửi báo cáo của bạn đến các admin bot",
+    "Đã gửi báo cáo của bạn đến ${soad} admin bot",
     event.threadID,
     () => {
     var idad = global.config.ADMINBOT;
