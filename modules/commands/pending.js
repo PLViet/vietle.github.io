@@ -17,7 +17,7 @@ module.exports.languages = {
 
         "cantGetPendingList": "Không thể lấy danh sách các nhóm đang chờ!",
         "returnListPending": "「PENDING」❮ Tổng số nhóm cần duyệt: %1 nhóm ❯\n\n%2",
-        "returnListClean": "「PENDING」Hiện tại không có nhóm nào trong hàng chờ"
+        "returnListClean": "「PENDING」Hiện tại không có nhóm or người dùng nào trong hàng chờ"
     },
     "en": {
         "invaildNumber": "%1 is not an invalid number",
@@ -67,7 +67,9 @@ module.exports.run = async function({ api, event, getText }) {
 		var pending = await api.getThreadList(100, null, ["PENDING"]) || [];
 	} catch (e) { return api.sendMessage(getText("cantGetPendingList"), threadID, messageID) }
 
-	const list = [...spam, ...pending].filter(group => group.isSubscribed && group.isGroup);
+	const listThread = [...spam, ...pending].filter(group => group.isSubscribed && group.isGroup);
+      const listUser = [...spam, ...pending].filter(group => group.isGroup == false)
+      const list = [...spam, ...pending].filter(group => group.isSubscribed);
 
     for (const single of list) msg += `${index++}/ ${single.name}(${single.threadID})\n`;
 
