@@ -15,8 +15,8 @@ module.exports.config = {
 module.exports.languages = {
     "vi": {
         "all": "%1/ %2 với %3 tin nhắn\n",
-        "mention": "%1 đứng hạng %2 với %3 tin nhắn \n📩Facebook.com/MhTuanng203",
-        "myself": "✨Bạn đang đứng hạng %1 với %2 tin nhắn \n 📩Facebook.com/MhTuanng203"
+        "mention": "%1 đứng hạng %2 với %3 tin nhắn \n📩 fb.me/100012371343281",
+        "myself": "✨Bạn đang đứng hạng %1 với %2 tin nhắn \n 📩 fb.me/100012371343281"
     },
     "en": {
         "all": "%1/ %2 with %3 messages\n",
